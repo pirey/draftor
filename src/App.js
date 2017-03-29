@@ -13,7 +13,13 @@ export default React => () => (
       <div
         style={{
           fontFamily: 'cursive'
-        }}>2017 &copy; Drafter App</div>
+        }}><a
+          style={{
+            textDecoration: 'none',
+            color: 'darkslategrey'
+          }}
+          href="https://github.com/pirey/drafter"
+        >View Source</a></div>
     </div>
   </div>
 )
