@@ -1,33 +1,14 @@
 import { connect } from 'react-redux'
-
-import { addDraft } from '../actions/draft'
+import { newDraft } from '../actions/ui'
 
 export default React => {
 
-  const AddDraft = props => {
-
-    let content
-
-    const { addDraft } = props
-
-    const submit = (e) => {
-      e.preventDefault()
-
-      const val = content.value.trim()
-
-      if (val) {
-        addDraft(val)
-        content.value = ''
-      }
-    }
+  const AddDraft = ({ newDraft }) => {
 
     return (
-      <form onSubmit={submit} className="add-draft">
-        <textarea
-          ref={(node) => content = node}
-        ></textarea>
-        <button type="submit">Add new</button>
-      </form>
+      <div className="add-draft">
+        <button onClick={newDraft} type="submit">Add new</button>
+      </div>
     )
   }
 
@@ -35,7 +16,7 @@ export default React => {
   })
 
   const mapDispatchToProps = (dispatch) => ({
-    addDraft: (content) => dispatch(addDraft(content))
+    newDraft: () => dispatch(newDraft())
   })
 
   return connect(

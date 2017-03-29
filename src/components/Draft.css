@@ -10,11 +10,15 @@
     font-family: cursive;
 }
 
+.draft .list {
+    list-style: none;
+}
+
+.draft .editor,
 .draft .add-draft,
 .draft .list {
     padding: 10px;
     margin: 0;
-    list-style: none;
     background-color: #eee;
 }
 
@@ -34,12 +38,14 @@
 
 }
 
+.draft .editor textarea,
 .draft .edit-draft textarea {
     min-height: 200px;
     margin-bottom: 10px;
 }
 
 .draft .add-draft textarea,
+.draft .editor textarea,
 .draft .edit-draft textarea {
     border: none;
     outline: none;
@@ -64,3 +70,4 @@
 .draft button:active {
     background: darkslategrey;
 }
+
