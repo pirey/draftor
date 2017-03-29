@@ -1,0 +1,66 @@
+.draft {
+    width: 100%;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.draft .header {
+    text-align: center;
+    font-family: cursive;
+}
+
+.draft .add-draft,
+.draft .list {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    background-color: #eee;
+}
+
+.draft .list li {
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.draft .list li:last-child {
+    margin-bottom: 0;
+}
+
+.draft .list li:hover {
+    background-color: #fafafa;
+
+}
+
+.draft .edit-draft textarea {
+    min-height: 200px;
+    margin-bottom: 10px;
+}
+
+.draft .add-draft textarea,
+.draft .edit-draft textarea {
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+
+    background: transparent;
+    font-size: large;
+}
+
+.draft button {
+    border: none;
+    background: slategrey;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.draft button:active {
+    background: darkslategrey;
+}
