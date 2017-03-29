@@ -18,7 +18,7 @@ export default React => () => (
             textDecoration: 'none',
             color: 'darkslategrey'
           }}
-          href="https://github.com/pirey/drafter"
+          href="https://github.com/pirey/draftor"
         >View Source</a></div>
     </div>
   </div>
