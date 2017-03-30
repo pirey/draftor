@@ -40,15 +40,17 @@
 }
 
 .draft .editor textarea {
-    min-height: 400px;
+    min-height: 200px;
+    box-sizing: border-box;
     margin-bottom: 10px;
+    padding: 10px;
     border: none;
     outline: none;
     display: block;
     width: 100%;
     max-width: 100%;
 
-    font-size: large;
+    font-size: 16px;
 }
 
 .draft button {
@@ -65,4 +67,3 @@
 .draft button:active {
     background: darkslategrey;
 }
-
