@@ -28,10 +28,10 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
-    <script>
+    <script type="text/javascript">
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js');
+          navigator.serviceWorker.register('%PUBLIC_URL%/service-worker.js');
         });
       }
     </script>

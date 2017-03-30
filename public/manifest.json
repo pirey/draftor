@@ -1,7 +1,15 @@
 {
-  "short_name": "Draftor",
   "name": "Draft Editor",
-  "icons": [],
+  "short_name": "Draftor",
   "start_url": "./",
-  "display": "standalone"
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A simple draft editor",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
 }
