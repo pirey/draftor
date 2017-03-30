@@ -1,0 +1,7 @@
+{
+  "short_name": "Draftor",
+  "name": "Draft Editor",
+  "icons": [],
+  "start_url": "./",
+  "display": "standalone"
+}
