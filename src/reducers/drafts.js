@@ -1,4 +1,4 @@
-import { SAVE_DRAFT, ADD_DRAFT } from '../actions/drafts'
+import { CLEAR_DRAFT, SAVE_DRAFT, ADD_DRAFT, REMOVE_DRAFT } from '../actions/drafts'
 
 export default (state = [], action) => {
 
@@ -14,6 +14,12 @@ export default (state = [], action) => {
           content,
         }
       ]
+
+    case CLEAR_DRAFT:
+      return []
+
+    case REMOVE_DRAFT:
+      return state.filter(item => item.id !== id)
 
     case SAVE_DRAFT:
       return state.map(item => {

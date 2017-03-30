@@ -1,21 +1,19 @@
-import { connect } from 'react-redux'
 import createListItem from './ListItem'
-import { editDraft } from '../actions/ui'
 
 const List = React => {
 
   const ListItem = createListItem(React)
 
-  const List = ({ items = [], editDraft }) => {
+  const List = ({ drafts = [], editDraft }) => {
 
-    if (items.length <= 0) {
+    if (drafts.length <= 0) {
       return null;
     }
 
     return (
       <ul className="list">
         {
-          items.map(item => (
+          drafts.map(item => (
             <ListItem
               editDraft={editDraft}
               item={item}
@@ -26,18 +24,7 @@ const List = React => {
     )
   }
 
-  const mapStateToProps = (state) => ({
-    items: state.drafts
-  })
-
-  const mapDispatchToProps = (dispatch) => ({
-    editDraft: (draft) => dispatch(editDraft(draft))
-  })
-
-  return connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(List)
+  return List
 }
 
 export default List

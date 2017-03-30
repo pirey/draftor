@@ -1,5 +1,5 @@
 export default React => {
-  const Editor = ({ draft, editMode, newMode, submitHandler, closeEditor }) => {
+  const Editor = ({ draft, editMode, newMode, submitHandler, closeEditor, removeDraft }) => {
 
     let content
 
@@ -28,15 +28,25 @@ export default React => {
       closeEditor()
     }
 
+    const deleteButton = (
+      <button
+        className="btn-delete"
+        onClick={() => removeDraft(draft.id)}>Delete</button>
+    )
+
     return (
       <form onSubmit={submit} className="editor">
         <textarea
           ref={(node) => content = node}
           defaultValue={defaultValue}
+          placeholder="Write something..."
         ></textarea>
         <button type="submit">Save</button>
-        {' '}
-        <button onClick={cancel}>Cancel</button>
+        {editMode && ' '}
+        {editMode && deleteButton}
+        {closeEditor && ' '}
+        {closeEditor &&
+          <button className="btn-cancel" onClick={cancel}>Cancel</button>}
       </form>
     )
   }

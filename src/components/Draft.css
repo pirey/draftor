@@ -67,3 +67,18 @@
 .draft button:active {
     background: darkslategrey;
 }
+
+.draft button.btn-delete {
+    background: indianred;
+}
+.draft button.btn-delete:active {
+    background: darkred;
+}
+.draft button.btn-cancel {
+    background: lightgrey;
+    color: grey;
+}
+.draft button.btn-cancel:active {
+    background: dimgrey;
+    color: white;
+}
